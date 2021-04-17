@@ -46,7 +46,7 @@ INNER JOIN departments ON dept_manager.dept_no = departments.dept_no
 WHERE dept_name='Sales' OR dept_name='Development';
 
 --Query 8 - In descending order, list the frequency count of employee last names, i.e., 
---how many employees share each last name.
+--how many 3employees share each last name.
 SELECT last_name, COUNT(last_name) AS last_name_count
 FROM employees
 GROUP BY last_name

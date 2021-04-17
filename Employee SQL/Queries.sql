@@ -22,3 +22,25 @@ SELECT employees.emp_no, employees.last_name, employees.first_name, departments.
 FROM employees
 INNER JOIN dept_manager ON employees.emp_no = dept_manager.emp_no
 INNER JOIN departments ON dept_manager.dept_no = departments.dept_no;
+
+--Query 5 - List first name, last name, and sex for employees whose first name is 
+--"Hercules" and last names begin with "B."
+SELECT first_name, last_name, sex
+FROM employees
+WHERE first_name ='Hercules' AND last_name LIKE 'B%';
+
+--Query 6 - List all employees in the Sales department, including their employee number, 
+--last name, first name, and department name.
+SELECT employees.emp_no, employees.last_name, employees.first_name, departments.dept_name
+FROM employees
+INNER JOIN dept_manager ON employees.emp_no = dept_manager.emp_no
+INNER JOIN departments ON dept_manager.dept_no = departments.dept_no
+WHERE dept_name='Sales';
+
+--Query 7 - List all employees in the Sales and Development departments, including their employee 
+--number, last name, first name, and department name.
+SELECT employees.emp_no, employees.last_name, employees.first_name, departments.dept_name
+FROM employees
+INNER JOIN dept_manager ON employees.emp_no = dept_manager.emp_no
+INNER JOIN departments ON dept_manager.dept_no = departments.dept_no
+WHERE dept_name='Sales' OR dept_name='Development';

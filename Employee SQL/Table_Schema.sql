@@ -5,14 +5,14 @@ DROP TABLE IF EXISTS dept_manager;
 DROP TABLE IF EXISTS salaries;
 DROP TABLE IF EXISTS titles;
 
-CREATE TABLE employees (
-	emp_no INTEGER PRIMARY KEY,
-	emp_title_id VARCHAR(5),
-	birth_date DATE,
-	first_name VARCHAR(20),
-	last_name VARCHAR(20),
-	sex VARCHAR(1),
-	hire_date DATE
+	CREATE TABLE employees (
+		emp_no INTEGER PRIMARY KEY,
+		emp_title_id VARCHAR(5),
+		birth_date DATE,
+		first_name VARCHAR(20),
+		last_name VARCHAR(20),
+		sex VARCHAR(1),
+		hire_date DATE
 );
 
 CREATE TABLE departments (
